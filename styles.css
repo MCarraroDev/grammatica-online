@@ -162,6 +162,98 @@ body {
     background-color: rgba(128, 128, 128, 0.2);
 }
 
+/* Analysis content styles */
+.analysis-content {
+    padding: 1rem 0;
+}
+
+.complement-section {
+    margin-bottom: 2rem;
+}
+
+.complement-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.complement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.complement-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.complement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.complement-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.complement-card .description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.complement-card .examples {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.complement-card .examples h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.complement-card .examples ul {
+    list-style: none;
+    padding: 0;
+}
+
+.complement-card .examples li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.complement-card .examples li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.complement-card .notes {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .complement-card .examples {
+    background: rgba(255, 255, 255, 0.05);
+}
+
 /* Add padding to bottom to account for fixed footer */
 .container {
     padding-bottom: 4rem;
