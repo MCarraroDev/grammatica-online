@@ -5,12 +5,18 @@
     --background-color: #fffafa;
     --text-color: #2C3E50;
     --card-background: white;
+    --button-background: #2C3E50;
+    --button-text: white;
+    --button-hover: #34495e;
 }
 
 [data-theme='dark'] {
     --background-color: #1a1a1a;
     --text-color: #ffffff;
     --card-background: #2d2d2d;
+    --button-background: #4A90E2;
+    --button-text: white;
+    --button-hover: #357abd;
 }
 
 * {
@@ -63,7 +69,7 @@ body {
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -93,18 +99,24 @@ body {
 }
 
 .back-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 0.8rem 1.5rem;
-    background-color: var(--text-color);
-    color: white;
+    background-color: var(--button-background);
+    color: var(--button-text);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 2rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.4s ease;
+    border: none;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .back-button:hover {
-    background-color: #34495e;
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive design */
@@ -143,11 +155,11 @@ body {
     color: var(--text-color);
     padding: 0.5rem;
     border-radius: 50%;
-    transition: background-color 0.3s ease, color 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .theme-switcher:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 /* Add padding to bottom to account for fixed footer */
