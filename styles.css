@@ -188,12 +188,14 @@ body {
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .complement-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .complement-card h3 {
@@ -250,6 +252,14 @@ body {
 }
 
 /* Dark theme adjustments */
+[data-theme='dark'] .complement-card {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .complement-card:hover {
+    border-color: var(--primary-color);
+}
+
 [data-theme='dark'] .complement-card .examples {
     background: rgba(255, 255, 255, 0.05);
 }

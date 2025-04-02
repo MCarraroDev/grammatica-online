@@ -147,7 +147,7 @@ function App() {
                     },
                     {
                         name: 'Complemento di Specificazione',
-                        description: 'Precisa un termine generico',
+                        description: 'Precisa un possesso',
                         examples: ['Il gatto di Giorgio è simpatico'],
                         notes: 'Introdotto dalla preposizione "di"'
                     },
