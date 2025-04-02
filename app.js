@@ -1,7 +1,36 @@
-const { useState } = React;
+const { useState, useEffect } = React;
+
+function Footer() {
+    return (
+        <footer className="footer">
+            Creato da <a href="https://github.com/MCarraroDev" target="_blank" rel="noopener noreferrer">Marco Carraro</a>
+        </footer>
+    );
+}
+
+function ThemeSwitcher({ theme, onToggle }) {
+    return (
+        <button 
+            className="theme-switcher" 
+            onClick={onToggle}
+            title={`Passa al tema ${theme === 'light' ? 'scuro' : 'chiaro'}`}
+        >
+            {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+    );
+}
 
 function App() {
     const [selectedSection, setSelectedSection] = useState(null);
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    };
 
     const sections = {
         grammaticale: {
@@ -64,7 +93,13 @@ function App() {
         );
     };
 
-    return selectedSection ? <SectionPage section={selectedSection} /> : <HomePage />;
+    return (
+        <div>
+            <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
+            {selectedSection ? <SectionPage section={selectedSection} /> : <HomePage />}
+            <Footer />
+        </div>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -4,6 +4,13 @@
     --tertiary-color: #2ECC71;
     --background-color: #F5F6FA;
     --text-color: #2C3E50;
+    --card-background: white;
+}
+
+[data-theme='dark'] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-background: #2d2d2d;
 }
 
 * {
@@ -50,7 +57,7 @@ body {
 }
 
 .option-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -76,7 +83,7 @@ body {
 
 .content-page {
     padding: 2rem;
-    background: white;
+    background: var(--card-background);
     border-radius: 15px;
     margin-top: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,9 +105,56 @@ body {
 }
 
 /* Responsive design */
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--card-background);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switcher:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to bottom to account for fixed footer */
+.container {
+    padding-bottom: 4rem;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
+        padding-bottom: 4rem;
     }
     
     .header h1 {
