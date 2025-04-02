@@ -9,7 +9,7 @@
 
 ### 🎯 Un'applicazione web moderna per imparare la grammatica italiana in modo interattivo
 
-[Visita il Sito](https://mccarrarodev.github.io/grammatica-online) · [Segnala Bug](https://github.com/MCarraroDev/grammatica-online/issues) · [Richiedi Feature](https://github.com/MCarraroDev/grammatica-online/issues)
+[Visita il Sito](https://MCarraroDev.github.io/grammatica-online) · [Segnala Bug](https://github.com/MCarraroDev/grammatica-online/issues) · [Richiedi Feature](https://github.com/MCarraroDev/grammatica-online/issues)
 
 </div>
 
@@ -25,7 +25,7 @@
 
 ## 🚀 Demo
 
-Prova l'applicazione live: [Grammatica Online](https://mccarrarodev.github.io/grammatica-online)
+Prova l'applicazione live: [Grammatica Online](https://MCarraroDev.github.io/grammatica-online)
 
 ## 💻 Tecnologie
 
