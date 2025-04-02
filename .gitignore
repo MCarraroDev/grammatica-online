@@ -1,4 +1,8 @@
 # LISTA DI FILE IGNORATI
 
 #Cartella di file non utilizzati
-.private
+.DS_Store
+node_modules/
+.env
+.private/
+*.log
