@@ -53,7 +53,7 @@ function App() {
     const HomePage = () => (
         <div className="container">
             <header className="header">
-                <h1>Grammatica Italiana</h1>
+                <h1>Grammatica Online</h1>
                 <p>Scegli l'argomento che vuoi studiare</p>
             </header>
             <div className="options-grid">
